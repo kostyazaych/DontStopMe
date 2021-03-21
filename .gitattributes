@@ -6,3 +6,4 @@
 *.db-shm filter=lfs diff=lfs merge=lfs -text
 *.uasset filter=lfs diff=lfs merge=lfs -text
 *.umap filter=lfs diff=lfs merge=lfs -text
+*.modules filter=lfs diff=lfs merge=lfs -text
