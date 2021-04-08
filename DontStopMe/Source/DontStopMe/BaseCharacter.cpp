@@ -3,7 +3,7 @@
 
 #include "BaseCharacter.h"
 #include "Engine/GameEngine.h" 
-
+#include "GameFramework/CharacterMovementComponent.h"
 	
 
 // Sets default values
@@ -47,9 +47,22 @@ void ABaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 void ABaseCharacter::VelocityChange (int x)
 {
 	//UE_LOG(LogTemp, Warning, TEXT("Some warning message"), x);
-	GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, FString::Printf(TEXT("Some variable values: x: %x"), x));
+	//GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, FString::Printf(TEXT("Some variable values: x: %x"), x));
+	float test = GetCharacterMovement()->MaxWalkSpeed;
+	switch (x)
+	{
+	case 1: 
+		GetCharacterMovement()->MaxWalkSpeed = 200;
 
+	case 2: 
+		GetCharacterMovement()->MaxWalkSpeed = 650;
 
+	case 3:
+		GetCharacterMovement()->MaxWalkSpeed = 800;
+	}
+	
+
+	//UCharacterMovementComponent test = GetOwner()->FindComponentByClass<UActorComponent>();
 	//GetCharacterMovement->SetMaxAccelaration 
 }
 

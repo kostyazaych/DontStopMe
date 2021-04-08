@@ -13,7 +13,7 @@ class DONTSTOPME_API ABaseCharacter : public ACharacter
 
 
 public:
-	UFUNCTION (BlueprintCallable,  meta = (Tooltip = "Type is 0 as idle, 1 as walk, 2 as run"))
+	UFUNCTION (BlueprintCallable,  meta = (Tooltip = "Type is 0 as idle, 1 as walk, 2 as run slowly, 3 as run"))
 	void VelocityChange(int type);
 
 public:
