@@ -62,11 +62,11 @@ void ABaseCharacter::VelocityChange (int x)
 		break;
 
 	case 2: 
-		GetCharacterMovement()->MaxWalkSpeed = 650.0f;
+		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
 		break;
 
 	case 3:
-		GetCharacterMovement()->MaxWalkSpeed = 800.0f;
+		GetCharacterMovement()->MaxWalkSpeed = 900.0f;
 		break;
 	}
 	
