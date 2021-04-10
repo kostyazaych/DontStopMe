@@ -16,6 +16,8 @@ public:
 	UFUNCTION (BlueprintCallable,  meta = (Tooltip = "Type is 0 as idle, 1 as walk, 2 as run slowly, 3 as run"))
 	void VelocityChange(int type);
 
+	
+
 public:
 	// Sets default values for this character's properties
 	ABaseCharacter();
@@ -30,5 +32,7 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	
 
 };

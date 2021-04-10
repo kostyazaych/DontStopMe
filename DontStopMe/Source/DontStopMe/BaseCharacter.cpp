@@ -48,17 +48,26 @@ void ABaseCharacter::VelocityChange (int x)
 {
 	//UE_LOG(LogTemp, Warning, TEXT("Some warning message"), x);
 	//GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, FString::Printf(TEXT("Some variable values: x: %x"), x));
-	float test = GetCharacterMovement()->MaxWalkSpeed;
+	float test = GetCharacterMovement() -> MaxWalkSpeed;
+	UE_LOG(LogTemp, Warning, TEXT("!!!!___MAX_WALK_SPEED__!!!!!"), test);
 	switch (x)
 	{
+	default: 
+		GetCharacterMovement()->MaxWalkSpeed = 10200.0f;
+		UE_LOG(LogTemp, Warning, TEXT("UNKNOWN MOVEMENT MODE "), x);
+		break;
+
 	case 1: 
-		GetCharacterMovement()->MaxWalkSpeed = 200;
+		GetCharacterMovement()->MaxWalkSpeed = 200.0f;
+		break;
 
 	case 2: 
-		GetCharacterMovement()->MaxWalkSpeed = 650;
+		GetCharacterMovement()->MaxWalkSpeed = 650.0f;
+		break;
 
 	case 3:
-		GetCharacterMovement()->MaxWalkSpeed = 800;
+		GetCharacterMovement()->MaxWalkSpeed = 800.0f;
+		break;
 	}
 	
 
