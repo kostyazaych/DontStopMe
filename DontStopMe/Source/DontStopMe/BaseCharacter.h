@@ -13,11 +13,11 @@ class DONTSTOPME_API ABaseCharacter : public ACharacter
 
 
 public:
-	UFUNCTION (BlueprintCallable,  meta = (Tooltip = "Type is 0 as idle, 1 as walk, 2 as run slowly, 3 as run"))
+	UFUNCTION (BlueprintCallable,  meta = (Tooltip = "Type is 0 as idle, 1 as walk, 2 as run slowly, 3 as run, 4 as sprint"))
 	void VelocityChange(int type);
 
-	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Custom decelerate"))
-		void Decelerate();
+	/*UFUNCTION(BlueprintCallable, meta = (Tooltip = "Custom decelerate"))
+		void Decelerate(float customBrakingDeceleration);*/
 
 public:
 	// Sets default values for this character's properties

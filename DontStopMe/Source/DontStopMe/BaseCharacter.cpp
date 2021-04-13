@@ -52,27 +52,33 @@ void ABaseCharacter::VelocityChange (int x)
 	switch (x)
 	{
 	default: 
-		GetCharacterMovement()->MaxWalkSpeed = 10200.0f;
-		UE_LOG(LogTemp, Warning, TEXT("UNKNOWN MOVEMENT MODE "), x);
+		GetCharacterMovement()->MaxWalkSpeed = 00.0f;
+		UE_LOG(LogTemp, Warning, TEXT("!UNKNOWN_MOVEMENT_MODE %x"), x);
 		break;
 
 	case 1: 
 		GetCharacterMovement()->MaxWalkSpeed = 200.0f;
+		GetCharacterMovement()->BrakingFrictionFactor = 0.9f;
 		break;
 
 	case 2: 
 		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+		GetCharacterMovement()->BrakingFrictionFactor = 0.75f;
+
 		break;
 
 	case 3:
+		GetCharacterMovement()->MaxWalkSpeed = 800.0f;
+		GetCharacterMovement()->BrakingFrictionFactor = 0.65f;
+
+		break;
+
+	case 4:
 		GetCharacterMovement()->MaxWalkSpeed = 900.0f;
+		GetCharacterMovement()->BrakingFrictionFactor = 0.55f;
+
 		break;
 	}
+	
 
 }
-
-void ABaseCharacter::Decelerate()
-{
-
-}
-
