@@ -49,7 +49,6 @@ void ABaseCharacter::VelocityChange (int x)
 	//UE_LOG(LogTemp, Warning, TEXT("Some warning message"), x);
 	//GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, FString::Printf(TEXT("Some variable values: x: %x"), x));
 	float test = GetCharacterMovement() -> MaxWalkSpeed;
-	UE_LOG(LogTemp, Warning, TEXT("!!!!___MAX_WALK_SPEED__!!!!! test: %test"), test);
 	switch (x)
 	{
 	default: 
@@ -69,9 +68,11 @@ void ABaseCharacter::VelocityChange (int x)
 		GetCharacterMovement()->MaxWalkSpeed = 900.0f;
 		break;
 	}
-	
 
-	//UCharacterMovementComponent test = GetOwner()->FindComponentByClass<UActorComponent>();
-	//GetCharacterMovement->SetMaxAccelaration 
+}
+
+void ABaseCharacter::Decelerate()
+{
+
 }
 
